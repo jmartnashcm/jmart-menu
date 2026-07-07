@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif; /* Thêm font chữ cơ bản để chữ hiển thị mượt mà */
         }
         body {
             background-color: #f5f5f7;
@@ -18,20 +19,38 @@
             max-width: 800px;
             margin: 0 auto;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            background-color: #fff;
         }
         .menu-image {
             width: 100%;
             height: auto;
             display: block;
         }
+        
+        /* Căn chỉnh giao diện cho nút bấm ưu đãi */
+        .promo-btn {
+            display: block;
+            text-align: center;
+            background-color: #ff3b30; /* Màu đỏ nổi bật */
+            color: white;
+            text-decoration: none; /* Bỏ gạch chân của link */
+            padding: 16px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .promo-btn:hover {
+            background-color: #d63026; /* Màu sậm hơn khi người dùng rê chuột vào */
+        }
     </style>
 </head>
 <body>
 
     <div class="menu-container">
-        <!-- Chỉ cần điền đúng tên file ảnh bạn đã lưu trong thư mục -->
         <img src="https://i.ibb.co/SDhhPMN5/menu2.png" alt="Menu Trang 1" class="menu-image">
         <img src="https://i.ibb.co/mCK4KVBm/menu1.png" alt="Menu Trang 2" class="menu-image">
+        
+        <a href="https://jmarthcm.com/" class="promo-btn" target="_blank">Nhấn vào đây để nhận nhiều ưu đãi khác</a>
     </div>
 
 </body>
