@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif; /* Thêm font chữ cơ bản để chữ hiển thị mượt mà */
+            font-family: Arial, sans-serif;
         }
         body {
             background-color: #f5f5f7;
@@ -25,42 +25,46 @@
             width: 100%;
             height: auto;
             display: block;
+            /* Thêm background mờ để khi ảnh chưa kịp load khi cuộn nhanh thì nhìn vẫn mượt */
+            background-color: #eaeaea; 
         }
         
-        /* Căn chỉnh giao diện cho nút bấm ưu đãi */
         .promo-btn {
             display: block;
             text-align: center;
-            background-color: #ff3b30; /* Màu đỏ nổi bật */
+            background-color: #ff3b30;
             color: white;
-            text-decoration: none; /* Bỏ gạch chân của link */
+            text-decoration: none;
             padding: 16px 20px;
             font-size: 18px;
             font-weight: bold;
             transition: background-color 0.3s;
         }
         .promo-btn:hover {
-            background-color: #d63026; /* Màu sậm hơn khi người dùng rê chuột vào */
+            background-color: #d63026;
         }
     </style>
 </head>
 <body>
 
     <div class="menu-container">
+        <!-- TẤM 1: Bắt buộc tải ngay lập tức để khách không phải chờ -->
         <img src="https://i.ibb.co/chnhJHXw/Asset-1.png" alt="Menu Trang 1" class="menu-image">
-        <img src="https://i.ibb.co/WN30BKLX/Asset-2.png" alt="Menu Trang 2" class="menu-image">
-        <img src="https://i.ibb.co/PsmrK2RY/Asset-3.png" alt="Menu Trang 3" class="menu-image">
-        <img src="https://i.ibb.co/Y9X1dG4/Asset-4.png" alt="Menu Trang 4" class="menu-image">
-		<img src="https://i.ibb.co/hRjY7gT1/Asset-5.png" alt="Menu Trang 5" class="menu-image">
-        <img src="https://i.ibb.co/Cphc8CR1/Asset-6.png" alt="Menu Trang 6" class="menu-image">
-        <img src="https://i.ibb.co/xScfs3T0/Asset-7.png" alt="Menu Trang 7" class="menu-image">
-        <img src="https://i.ibb.co/5g8hPV2K/Asset-8.png" alt="Menu Trang 8" class="menu-image">
-		<img src="https://i.ibb.co/tP2PKnSt/Asset-10.png" alt="Menu Trang 9" class="menu-image">
-        <img src="https://i.ibb.co/99KyrwVh/Asset-11.png" alt="Menu Trang 10" class="menu-image">
-        <img src="https://i.ibb.co/q3fB09TZ/Asset-12.png" alt="Menu Trang 11" class="menu-image">
-        <img src="https://i.ibb.co/rGzBDYHm/Asset-13.png" alt="Menu Trang 12" class="menu-image">
-		<img src="https://i.ibb.co/tMWdDMgd/Asset-14.png" alt="Menu Trang 13" class="menu-image">
-		
+        
+        <!-- CÁC TẤM CÒN LẠI: Thêm loading="lazy" để khách cuộn tới đâu ảnh mới tải tới đó -->
+        <img src="https://i.ibb.co/WN30BKLX/Asset-2.png" alt="Menu Trang 2" class="menu-image" loading="lazy">
+        <img src="https://i.ibb.co/PsmrK2RY/Asset-3.png" alt="Menu Trang 3" class="menu-image" loading="lazy">
+        <img src="https://i.ibb.co/Y9X1dG4/Asset-4.png" alt="Menu Trang 4" class="menu-image" loading="lazy">
+        <img src="https://i.ibb.co/hRjY7gT1/Asset-5.png" alt="Menu Trang 5" class="menu-image" loading="lazy">
+        <img src="https://i.ibb.co/Cphc8CR1/Asset-6.png" alt="Menu Trang 6" class="menu-image" loading="lazy">
+        <img src="https://i.ibb.co/xScfs3T0/Asset-7.png" alt="Menu Trang 7" class="menu-image" loading="lazy">
+        <img src="https://i.ibb.co/5g8hPV2K/Asset-8.png" alt="Menu Trang 8" class="menu-image" loading="lazy">
+        <img src="https://i.ibb.co/tP2PKnSt/Asset-10.png" alt="Menu Trang 9" class="menu-image" loading="lazy">
+        <img src="https://i.ibb.co/99KyrwVh/Asset-11.png" alt="Menu Trang 10" class="menu-image" loading="lazy">
+        <img src="https://i.ibb.co/q3fB09TZ/Asset-12.png" alt="Menu Trang 11" class="menu-image" loading="lazy">
+        <img src="https://i.ibb.co/rGzBDYHm/Asset-13.png" alt="Menu Trang 12" class="menu-image" loading="lazy">
+        <img src="https://i.ibb.co/tMWdDMgd/Asset-14.png" alt="Menu Trang 13" class="menu-image" loading="lazy">
+        
         <a href="https://jmarthcm.com/" class="promo-btn" target="_blank">Nhấn vào đây để nhận nhiều ưu đãi khác</a>
     </div>
 
