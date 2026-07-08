@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NHÀ HÀNG HÀ NỘI 1983</title>
-    <link rel="icon" href="https://i.ibb.co/s9p8Tx5D/1983.png" type="image/png">
+    <title>Menu J-Mart</title>
+    <link rel="icon" href="LINK_ẢNH_LOGO_CỦA_BẠN" type="image/png">
+    
     <style>
         * {
             margin: 0;
@@ -26,7 +27,6 @@
             width: 100%;
             height: auto;
             display: block;
-            /* Thêm background mờ để khi ảnh chưa kịp load khi cuộn nhanh thì nhìn vẫn mượt */
             background-color: #eaeaea; 
         }
         
@@ -44,15 +44,37 @@
         .promo-btn:hover {
             background-color: #d63026;
         }
+
+        /* --- CSS CHO POPUP ĐẶT BÀN --- */
+        .floating-contact {
+            position: fixed;         /* Lệnh này giúp nút luôn "dính" vào màn hình */
+            top: 20px;               /* Cách góc trên 20px */
+            left: 20px;              /* Cách góc trái 20px */
+            background-color: #27ae60; /* Màu xanh lá nổi bật và thân thiện */
+            color: white;
+            padding: 10px 15px;
+            border-radius: 30px;     /* Bo tròn 2 đầu */
+            font-size: 13px;         /* Chữ nhỏ gọn */
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Đổ bóng nhẹ cho nút nổi lên */
+            z-index: 1000;           /* Đảm bảo nút luôn nằm trên cùng, không bị ảnh đè lên */
+            transition: transform 0.3s;
+        }
+        /* Hiệu ứng khi rê chuột vào (trên máy tính) */
+        .floating-contact:hover {
+            transform: scale(1.05);  /* Phóng to một chút */
+            background-color: #219653;
+        }
     </style>
 </head>
 <body>
 
+    <a href="tel:0336346346" class="floating-contact">📞 LIÊN HỆ ĐẶT BÀN 0336.346.346</a>
+
     <div class="menu-container">
-        <!-- TẤM 1: Bắt buộc tải ngay lập tức để khách không phải chờ -->
         <img src="https://i.ibb.co/chnhJHXw/Asset-1.png" alt="Menu Trang 1" class="menu-image">
         
-        <!-- CÁC TẤM CÒN LẠI: Thêm loading="lazy" để khách cuộn tới đâu ảnh mới tải tới đó -->
         <img src="https://i.ibb.co/WN30BKLX/Asset-2.png" alt="Menu Trang 2" class="menu-image" loading="lazy">
         <img src="https://i.ibb.co/PsmrK2RY/Asset-3.png" alt="Menu Trang 3" class="menu-image" loading="lazy">
         <img src="https://i.ibb.co/Y9X1dG4/Asset-4.png" alt="Menu Trang 4" class="menu-image" loading="lazy">
