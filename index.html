@@ -45,32 +45,55 @@
             background-color: #d63026;
         }
 
-        /* --- CSS CHO POPUP ĐẶT BÀN --- */
-        .floating-contact {
-            position: fixed;         /* Lệnh này giúp nút luôn "dính" vào màn hình */
-            top: 20px;               /* Cách góc trên 20px */
-            left: 20px;              /* Cách góc trái 20px */
-            background-color: #27ae60; /* Màu xanh lá nổi bật và thân thiện */
+        /* --- CSS CHO CỤM NÚT LIÊN HỆ GÓC TRÁI --- */
+        .contact-wrapper {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column; /* Xếp 2 nút theo chiều dọc */
+            gap: 10px;              /* Khoảng cách hở giữa 2 nút */
+            z-index: 1000;
+        }
+
+        /* Định dạng chung cho cả 2 nút */
+        .floating-btn {
             color: white;
-            padding: 10px 15px;
-            border-radius: 30px;     /* Bo tròn 2 đầu */
-            font-size: 13px;         /* Chữ nhỏ gọn */
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 13px;
             font-weight: bold;
             text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Đổ bóng nhẹ cho nút nổi lên */
-            z-index: 1000;           /* Đảm bảo nút luôn nằm trên cùng, không bị ảnh đè lên */
-            transition: transform 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s, background-color 0.3s;
         }
-        /* Hiệu ứng khi rê chuột vào (trên máy tính) */
-        .floating-contact:hover {
-            transform: scale(1.05);  /* Phóng to một chút */
+        .floating-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Màu riêng cho nút Gọi điện */
+        .btn-call {
+            background-color: #27ae60; 
+        }
+        .btn-call:hover {
             background-color: #219653;
+        }
+
+        /* Màu riêng cho nút Zalo */
+        .btn-zalo {
+            background-color: #0068ff; /* Xanh dương chuẩn của Zalo */
+        }
+        .btn-zalo:hover {
+            background-color: #0055d4; /* Xanh đậm hơn chút khi rê chuột */
         }
     </style>
 </head>
 <body>
 
-    <a href="tel:0336346346" class="floating-contact">📞 LIÊN HỆ ĐẶT BÀN 0336.346.346</a>
+    <div class="contact-wrapper">
+        <a href="tel:0336346346" class="floating-btn btn-call">📞 LIÊN HỆ: 0336.346.346</a>
+        <a href="https://zalo.me/0336346346" target="_blank" class="floating-btn btn-zalo">💬 ZALO: 0336.346.346</a>
+    </div>
 
     <div class="menu-container">
         <img src="https://i.ibb.co/chnhJHXw/Asset-1.png" alt="Menu Trang 1" class="menu-image">
